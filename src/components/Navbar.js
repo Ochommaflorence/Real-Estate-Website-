@@ -11,6 +11,7 @@ const Navbar = () => {
         <Nav>
             <Logo>Florrie's Home</Logo>
             <MenuBars/>
+            <NavMenu></NavMenu>
             <h1>Navbar</h1>
         </Nav>
     )
