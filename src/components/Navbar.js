@@ -17,10 +17,14 @@ const NavMenu = styled.div`
 const Navbar = () => {
     return (
         <Nav>
-            <Logo>Florrie's Home</Logo>
+            <Logo to="/">Florrie's Home</Logo>
             <MenuBars/>
             <NavMenu>
-
+                {menuData.map((menu, index) =>{
+                   <NavMenuLinks to={menu.link} key={index}>
+                       {menu.title}
+                   </NavMenuLinks>
+                })}
             </NavMenu>
             <h1>Navbar</h1>
         </Nav>
