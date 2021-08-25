@@ -8,9 +8,11 @@ const Nav = styled.nav`
 
 const Navbar = () => {
     return (
-        <div>
+        <Nav>
+            <Logo>Florrie's Home</Logo>
+            <MenuBars/>
             <h1>Navbar</h1>
-        </div>
+        </Nav>
     )
 }
 
