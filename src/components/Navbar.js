@@ -5,12 +5,18 @@ import {menuData} from '../data/MenuData';
 
 const Nav = styled.nav`
   height: 60px;
+  width:100%;
   display: flex;
   justify-content:space-between;
   padding: 1rem 2rem;
   background: #000;
   z-index: 100;
   position: fixed;
+`
+const NavLink = css`
+ color: #fff;
+ display: flex;
+ align-items:center;
 `
 const Logo = styled(Link)`
 color:#fff;
