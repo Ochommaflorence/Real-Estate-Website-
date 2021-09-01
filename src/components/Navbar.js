@@ -39,7 +39,7 @@ const NavMenuLinks = styled(Link)`
 const NavBtn = styled.div`
  display:flex;
  align-items: center;
- margin-right: 24px;
+ margin-right: 50px;
 `;
 
 const Navbar = () => {
