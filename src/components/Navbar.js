@@ -2,6 +2,7 @@ import React from 'react'
 import styled, {css} from 'styled-components/macro';
 import {Link} from 'react-router-dom';
 import {menuData} from '../data/MenuData';
+import { Button } from './Button';
 
 const Nav = styled.nav`
   height: 60px;
@@ -9,7 +10,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content:space-between;
   padding: 1rem 2rem;
-  background: #000;
+  background: red;
   z-index: 100;
   position: fixed;
 `
@@ -34,6 +35,13 @@ const NavMenu = styled.div`
 const NavMenuLinks = styled(Link)`
   ${NavLink}
 `;
+
+const NavBtn = styled.div`
+ display:flex;
+ align-items: center;
+ margin-right: 24px;
+`;
+
 const Navbar = () => {
     return (
         <Nav>
@@ -46,6 +54,9 @@ const Navbar = () => {
                    </NavMenuLinks>
                 ))}
             </NavMenu>
+            <NavBtn>
+                <Button to="/" primary='true'>SEE Me</Button>
+            </NavBtn>
         
         </Nav>
     )
