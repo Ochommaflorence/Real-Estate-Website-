@@ -10,14 +10,22 @@ const HeroSection = styled.section`
 const HeroWrapper = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   position: relative;
 `
+
+
+
+
 const Hero = () => {
     return (
         <HeroSection>
+            <HeroWrapper>
            <h1>herro</h1> 
+           </HeroWrapper>
         </HeroSection>
     )
 }
