@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -7,7 +7,13 @@ const HeroSection = styled.section`
   position: relative;
   overflow: hidden;
 `;
-const HeroWrapper = styled.div``
+const HeroWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`
 const Hero = () => {
     return (
         <HeroSection>
