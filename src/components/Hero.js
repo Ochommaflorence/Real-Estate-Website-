@@ -1,5 +1,5 @@
-import React from 'react'
-import styled, { css } from 'styled-components/macro';
+import React from "react";
+import styled, { css } from "styled-components/macro";
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -15,19 +15,25 @@ const HeroWrapper = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
-`
-
-
-
+`;
 
 const Hero = () => {
-    return (
-        <HeroSection>
-            <HeroWrapper>
-           <h1>herro</h1> 
-           </HeroWrapper>
-        </HeroSection>
-    )
-}
+  return (
+    <HeroSection>
+      <HeroWrapper>
+        {slides.map((slide, index) => {
+          return (
+            <HeroSlide key={index}>
+              <HeroSlider>
+                <HeroImage />
+                <HeroContent></HeroContent>
+              </HeroSlider>
+            </HeroSlide>
+          );
+        })}
+      </HeroWrapper>
+    </HeroSection>
+  );
+};
 
-export default Hero
+export default Hero;
