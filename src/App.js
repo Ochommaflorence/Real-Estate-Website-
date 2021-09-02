@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import GlobalStyle from "./globalStyle";
 import Hero from "./components/Hero";
 import { SliderData } from "./data/SliderData";
+import DropDown from "./components/DropDown";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <GlobalStyle />
         <Navbar />
+        <DropDown/>
         <Hero slides={SliderData} />
       </Router>
     </>
