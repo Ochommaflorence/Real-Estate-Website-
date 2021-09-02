@@ -16,7 +16,8 @@ const DropDownContainer = styled.div`
    top: 0;
    left: 0;
    transition: 0.3s ease-in-out;
-   opacity: 1;
+   opacity: ${({isOpen}) => (isOpen ? '1' : '0')};
+   top:${({isOpen}) => (isOpen ? '0' : '-100%')}
 `
 const Icon = styled.div`
  position: absolute;
@@ -38,6 +39,10 @@ const DropdownMenu = styled.div`
  grid-template-rows: repeat(4, 80px);
  text-align:center;
  margin-bottom: 4rem;
+
+ @media screen and (max-width: 480px) {
+    grid-template-rows: repeat(4, 60px);
+ }
 `
 const DropdownLink = styled(Link)`
  display: flex;
@@ -50,15 +55,22 @@ const DropdownLink = styled(Link)`
  color: #fff;
  cursor: pointer;
  transition:0.2s ease-in-out;
+
+ &:hover {
+     color: #000d1a;
+ }
 `
-const BtnWrap = styled.div``
+const BtnWrap = styled.div`
+  display:flex;
+  justify-content: center;
+`
 
 
 
-const DropDown = () => {
+const DropDown = ({isOpen, toggle}) => {
     return (
-        <DropDownContainer>
-            <Icon>
+        <DropDownContainer isOpen={isOpen} onClick={toggle}>
+            <Icon onClick={toggle}>
                 <CloseIcon/>
             </Icon>
             <DropdownWrapper>
