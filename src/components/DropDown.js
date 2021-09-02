@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 import { menuData } from '../data/MenuData';
+import { Button } from './Button';
+import {Link} from 'react-router-dom';
+import {FaTimes} from 'react-icons/fa'
 
 const DropDownContainer = styled.div`
    position: fixed;
@@ -15,6 +18,33 @@ const DropDownContainer = styled.div`
    transition: 0.3s ease-in-out;
    opacity: 1;
 `
+const Icon = styled.div`
+ position: absolute;
+ top:1.2rem;
+ right:1.5rem;
+ background: transparent;
+ font-size: 2rem;
+ cursor: pointer;
+ outline: none;
+`
+const CloseIcon = styled(FaTimes)`
+  color: #000d1a;
+`
+const DropdownWrapper = styled.div``
+
+const DropdownMenu = styled.div`
+ display:grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: repeat(4, 80px);
+ text-align:center;
+ margin-bottom: 4rem;
+`
+const DropdownLink = styled(Link)`
+ display: flex;
+`
+const BtnWrap = styled.div``
+
+
 
 const DropDown = () => {
     return (
@@ -24,12 +54,18 @@ const DropDown = () => {
             </Icon>
             <DropdownWrapper>
                 <DropdownMenu>
-                    {menuData((item, index) => {
-                        <DropdownLink to={item.Link} key={index}>
+                    {menuData.map((item, index) => {
+                        return(
+                            <DropdownLink to={item.Link} key={index}>
                             {item.title}
                         </DropdownLink>
+                        )
+                        
                     })}
                 </DropdownMenu>
+                <BtnWrap>
+                    <Button primary="true" round="true" big="true" to="/">SEE ME</Button>
+                </BtnWrap>
             </DropdownWrapper>
         </DropDownContainer>
     )
