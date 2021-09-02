@@ -17,7 +17,14 @@ const HeroWrapper = styled.div`
   position: relative;
 `;
 
-const Hero = () => {
+const HeroSlide = styled.div``
+const HeroSlider = styled.div``
+const HeroImage = styled.img``
+const HeroContent = styled.div``
+
+
+
+const Hero = ({ slides }) => {
   return (
     <HeroSection>
       <HeroWrapper>
@@ -26,7 +33,9 @@ const Hero = () => {
             <HeroSlide key={index}>
               <HeroSlider>
                 <HeroImage />
-                <HeroContent></HeroContent>
+                <HeroContent>
+                    <h1>{slide.title}</h1>
+                </HeroContent>
               </HeroSlider>
             </HeroSlide>
           );
