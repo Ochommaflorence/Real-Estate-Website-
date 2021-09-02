@@ -41,6 +41,15 @@ const DropdownMenu = styled.div`
 `
 const DropdownLink = styled(Link)`
  display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #fff;
+ font-size: 1.5rem;
+ text-decoration: none;
+ list-style:none;
+ color: #fff;
+ cursor: pointer;
+ transition:0.2s ease-in-out;
 `
 const BtnWrap = styled.div``
 
